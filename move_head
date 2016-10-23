@@ -1,7 +1,7 @@
 from ev3dev.auto import OUTPUT_1, Motor
 import time
 
-m = ev3.LargeMotor('out1')
-m.run_timed(time_sp=3000, speed_sp=500)
-time.sleep(10)
+m = Motor(OUTPUT_1)
+m.run_forever(duty_cycle_sp = 100)
+time.sleep(1)
 m.stop()
